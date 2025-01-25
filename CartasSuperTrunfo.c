@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int main() 
-{char nome[50];   Barueri  
+int main() { 
+char nome[50];   Barueri  
  char codigo[4];   A01
  int populacao;    316.473
 float area km²;    64,17 
