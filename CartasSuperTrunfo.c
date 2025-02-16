@@ -324,6 +324,48 @@ int main() {
         printf("Pontos Turísticos: %d\n", cidades[i].pontos_turisticos);
         printf("\n");
     }
-
-    return 0;
+    void comparar_cidades(Cidade c1, Cidade c2) {
+        printf("Comparando %s e %s:\n", c1.nome_cidade, c2.nome_cidade);
+        
+        // Comparação de Densidade Populacional
+        float densidade1 = (float)c1.populacao / c1.area;
+        float densidade2 = (float)c2.populacao / c2.area;
+        if (densidade1 < densidade2) {
+            printf("Densidade Populacional: %s vence (%.2f < %.2f)\n", c1.nome_cidade, densidade1, densidade2);
+        } else {
+            printf("Densidade Populacional: %s vence (%.2f < %.2f)\n", c2.nome_cidade, densidade2, densidade1);
+        }
+    
+        // Comparação de PIB
+        if (c1.pib > c2.pib) {
+            printf("PIB: %s vence (%.2f > %.2f)\n", c1.nome_cidade, c1.pib, c2.pib);
+        } else {
+            printf("PIB: %s vence (%.2f > %.2f)\n", c2.nome_cidade, c2.pib, c1.pib);
+        }
+    
+        // Comparação de Pontos Turísticos
+        if (c1.pontos_turisticos > c2.pontos_turisticos) {
+            printf("Pontos Turísticos: %s vence (%d > %d)\n", c1.nome_cidade, c1.pontos_turisticos, c2.pontos_turisticos);
+        } else {
+            printf("Pontos Turísticos: %s vence (%d > %d)\n", c2.nome_cidade, c2.pontos_turisticos, c1.pontos_turisticos);
+        }
+    }
+    
+    int main() {
+        int cidade1, cidade2;
+        
+        printf("Escolha a primeira cidade (0 a 31): ");
+        scanf("%d", &cidade1);
+        printf("Escolha a segunda cidade (0 a 31): ");
+        scanf("%d", &cidade2);
+        
+        if (cidade1 < 0 || cidade1 >= ESTADOS * CIDADES || cidade2 < 0 || cidade2 >= ESTADOS * CIDADES) {
+            printf("Cidade inválida!\n");
+            return 1;
+        }
+    
+        comparar_cidades(cidades[cidade1 / CIDADES][cidade1 % CIDADES], cidades[cidade2 / CIDADES][cidade2 % CIDADES]);
+    
+        return 0;
+    }
 }
