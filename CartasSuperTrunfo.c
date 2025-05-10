@@ -1,371 +1,132 @@
 #include <stdio.h>
+#include <string.h> 
 
 // Definição da estrutura para armazenar informações da cidade
 struct Cidade {
-    char estado[50]; Acre
-    char nome[50]; Rio Branco
-    char codigo[4];A01 // Código da cidade (ex: A01)
-    int populacao; 364.756 
-    float area; 9.233 km² 
-    float pib; 10.955675 
-    int pontos_turisticos;64
-
-    char estado[50]; Acre
-    char nome[50]; Cruzeiro do Sul
-    char codigo[4];A02
-    int populacao; 12 457
-    float area;  7 924,943 km²
-    float pib; 1,425,684,780 
-    int pontos_turisticos; 10
-
-    char estado[50]; Acre
-    char nome[50]; Mancio Lima
-    char codigo[4];A03
-    int populacao; 17.910 
-    float area;  4 672,321 km²
-    float pib;  88 211,169 
-    int pontos_turisticos; 7
-
-   char estado[50]; Acre
-    char nome[50]; Plácido de Castro
-    char codigo[4];A04
-    int populacao;  19 565
-    float area;  2.047 km²
-    float pib;   601.471
-    int pontos_turisticos; 5
-
-
-
-   char estado[50]; Bahia
-    char nome[50]; Salvador
-    char codigo[4]; B01
-    int populacao;  2.910705
-    float area;  693,442 km²
-    float pib; 114.400000000
-    int pontos_turisticos; 15
-
-   char estado[50]; Bahia
-    char nome[50]; Feira de Santana
-    char codigo[4]; B02
-    int populacao;  616.272 
-    float area;  1.304 km²
-    float pib; 27.691,08
-    int pontos_turisticos; 12
-
-    char estado[50]; Bahia
-   char nome[50];  Ilheus
-    char codigo[4]; B03
-    int populacao;  178.649
-    float area; 1.456 km²
-    float pib; 32.756
-    int pontos_turisticos; 15
-    
-    char estado[50]; Bahia
-    char nome[50];  Porto Seguro
-    char codigo[4]; B04
-    int populacao; 168.326
-    float area;2 285,734 km²
-    float pib;  24.702,76.
-    int pontos_turisticos; 14
- 
-
-
-
-    char estado[50]; Ceará
-    char nome[50]; Fortaleza
-    char codigo[4]; C01
-    int populacao; 2.429000
-    float area; 313,8 km²
-    float pib;  83.459000
-    int pontos_turisticos; 15
-  
- char estado[50]; Ceará
-    char nome[50]; Sobral
-    char codigo[4]; C02
-    int populacao; 242.216
-    float area; 2 068,474 km²
-    float pib;  21 679,33
-    int pontos_turisticos; 10
-
-    char estado[50]; Ceará
-   char nome[50]; Acaraú 
-    char codigo[4]; C03
-    int populacao; 68 758 
-    float area; 842,884 km²
-    float pib; 309 490,000 
-    int pontos_turisticos; 5
-
-    char estado[50]; Ceará
-    char nome[50]; Maracanaú
-    char codigo[4]; C04
-    int populacao; 234.509
-    float area; 105,071 km²
-    float pib; 6.500000000 
-    int pontos_turisticos; 5
-
-
-
-
-   char estado[50]; Distrito Federal
-    char nome[50]; Brasília
-    char codigo[4]; D01
-    int populacao; 2.915869
-    float area; 5.801 km²
-    float pib; 34.959000
-    int pontos_turisticos; 15
-
-   char estado[50]; Distrito Federal
-    char nome[50]; Planaltina
-    char codigo[4]; D02
-    int populacao; 93.872
-    float area; 1.194 km²
-    float pib; 1.500000000
-    int pontos_turisticos; 5
-
-   char estado[50]; Distrito Federal
-    char nome[50]; Águas Lindas de Goiás
-    char codigo[4]; D03
-    int populacao; 225.693 
-    float area; 191,817 km²
-    float pib; 11.052,96
-    int pontos_turisticos; 5
-
-    char estado[50]; Distrito Federal
-    char nome[50]; Sobradinho
-    char codigo[4]; D04
-    int populacao; 91.142
-    float area; 1.142 km²
-    float pib; 1.500000000
-    int pontos_turisticos; 5
-
-
-
- 
-    char estado[50]; Espírito Santo
-    char nome[50]; Vitória
-    char codigo[4]; E01
-    int populacao;  396.718
-    float area; 1.103 km²
-    float pib; 14.500000000
-    int pontos_turisticos; 11
-  
-    char estado[50]; Espírito Santo
-    char nome[50]; Serra
-    char codigo[4]; E02
-    int populacao; 520.653
-    float area; 547,6 km²
-    float pib; 37270000000
-    int pontos_turisticos; 8
- 
-    char estado[50];Espírito Santo
-    char nome[50]; Cariacica
-    char codigo[4]; E03
-    int populacao; 393.946
-    float area; 279,975 km²
-    float pib; 13 698 973
-    int pontos_turisticos; 5
- 
-    char estado[50]; Espírito Santo
-    char nome[50]; Guarapari
-    char codigo[4]; E04
-    int populacao; 124.656
-    float area; 589,826 km²
-    float pib; 19.746,25
-    int pontos_turisticos; 7
-
-     
-
-
-    char estado[50]; Goiás
-    char nome[50]; Goiânia
-    char codigo[4]; G01
-    int populacao; 1.444919
-    float area; 729,296 km²
-    float pib; 59.000000000
-    int pontos_turisticos; 20
- 
-   char estado[50]; Goiás
-    char nome[50]; Anápolis
-    char codigo[4]; G02
-    int populacao; 434.1111
-    float area; 933,156 km²
-    float pib; 44.860,34
-    int pontos_turisticos; 10
-
-    char estado[50]; Goiás
-   char nome[50]; Aparecida de Goiânia
-    char codigo[4]; G03
-    int populacao; 550.925
-    float area; 279,954 km²
-    float pib; 28.213,26
-    int pontos_turisticos; 10
- 
-    char estado[50]; Goiás
-    char nome[50]; Trindade
-    char codigo[4]; G04
-    int populacao; 104.111
-    float area; 712,690
-    float pib; 20.200,76
-    int pontos_turisticos; 15
-  
-
-
-
-   char estado[50]; Maranhão
-    char nome[50]; São Luís
-    char codigo[4]; M01
-    int populacao; 1.011415
-    float area; 582,974 km²
-    float pib; 12.000,00
-    int pontos_turisticos; 10
-
-    char estado[50]; Maranhão
-    char nome[50]; Imperatriz
-    char codigo[4]; M02
-    int populacao; 250.000
-    float area; 1.000,000 km²
-    float pib; 10.000,00
-    int pontos_turisticos;  5
- 
-   char estado[50]; Maranhão
-    char nome[50]; Caxias
-    char codigo[4]; M03
-    int populacao; 463.501
-    float area; 1.652 km²
-    float pib; 1.814096000
-    int pontos_turisticos; 9
-
-   char estado[50]; Maranhão
-    char nome[50]; São José de Ribamar
-    char codigo[4]; M04
-    int populacao; 244.579
-    float area;  386,282 km²
-    float pib;	12.719,88
-    int pontos_turisticos; 15
-
-
-
-
-   char estado[50]; Rio de Janeiro
-    char nome[50]; Rio de Janeiro
-    char codigo[4]; R01 
-    int populacao; 6.775561
-    float area; 1.221,040 km²
-    float pib; 73.300,00
-    int pontos_turisticos; 20
-
-    char estado[50]; Rio de Janeiro
-   char nome[50]; Niterói
-    char codigo[4]; R02
-    int populacao; 487.327
-    float area; 138,000 km²
-    float pib; 10.000,00
-    int pontos_turisticos; 10
-
-    char estado[50]; Rio de Janeiro
-   char nome[50]; Nova Iguaçu
-    char codigo[4]; R03
-    int populacao;  1.363111
-    float area;  138,000 km²
-    float pib;  21.559,06
-    int pontos_turisticos; 5
-
-    char estado[50]; Rio de Janeiro
-    char nome[50];  Duque de Caxias
-    char codigo[4]; R04
-    int populacao;  934.914
-    float area; 118,000 km²
-    float pib;  12.000,00
-    int pontos_turisticos; 5
-
+    char estado[50];
+    char nome[50];
+    char codigo[4];
+    int populacao;
+    float area;
+    float pib;
+    int pontos_turisticos;
 };
+
+void comparar_cidades(struct Cidade c1, struct Cidade c2) {
+    printf("\nComparando %s e %s:\n", c1.nome, c2.nome);
+    
+    // Comparação de Densidade Populacional
+    float densidade1 = (float)c1.populacao / c1.area;
+    float densidade2 = (float)c2.populacao / c2.area;
+    if (densidade1 < densidade2) {
+        printf("Densidade Populacional: %s vence (%.2f < %.2f)\n", c2.nome, densidade1, densidade2);
+    } else if (densidade1 > densidade2) {
+        printf("Densidade Populacional: %s vence (%.2f > %.2f)\n", c1.nome, densidade1, densidade2);
+    } else {
+        printf("Densidade Populacional: Empate (%.2f = %.2f)\n", densidade1, densidade2);
+    }
+
+    // Comparação de PIB
+    if (c1.pib > c2.pib) {
+        printf("PIB: %s vence (%.2f > %.2f)\n", c1.nome, c1.pib, c2.pib);
+    } else if (c1.pib < c2.pib) {
+        printf("PIB: %s vence (%.2f < %.2f)\n", c2.nome, c2.pib, c1.pib);
+    } else {
+        printf("PIB: Empate (%.2f = %.2f)\n", c1.pib, c2.pib);
+    }
+
+    // Comparação de Pontos Turísticos
+    if (c1.pontos_turisticos > c2.pontos_turisticos) {
+        printf("Pontos Turísticos: %s vence (%d > %d)\n", c1.nome, c1.pontos_turisticos, c2.pontos_turisticos);
+    } else if (c1.pontos_turisticos < c2.pontos_turisticos) {
+        printf("Pontos Turísticos: %s vence (%d < %d)\n", c2.nome, c2.pontos_turisticos, c1.pontos_turisticos);
+    } else {
+        printf("Pontos Turísticos: Empate (%d = %d)\n", c1.pontos_turisticos, c2.pontos_turisticos);
+    }
+}
 
 int main() {
     // Criando um array de cidades para armazenar os dados
-    struct Cidade cidades[10];  // Ajuste o tamanho conforme necessário
-    int num_cidades = 0; // Contador de cidades
-
-    // Exemplo de entrada de dados para uma cidade
-    printf("Insira os dados para uma cidade:\n");
-
-    printf("Estado: ");
-    scanf("%s", cidades[num_cidades].estado);
-
-    printf("Nome da cidade: ");
-    scanf("%s", cidades[num_cidades].nome);
-
-    printf("Código da cidade: ");
-    scanf("%s", cidades[num_cidades].codigo);
-
-    printf("População: ");
-    scanf("%d", &cidades[num_cidades].populacao);
-
-    printf("Área (em km²): ");
-    scanf("%f", &cidades[num_cidades].area);
-
-    printf("PIB (em bilhões): ");
-    scanf("%f", &cidades[num_cidades].pib);
-
-    printf("Número de pontos turísticos: ");
-    scanf("%d", &cidades[num_cidades].pontos_turisticos);
-
-    printf("Cidade %s cadastrada com sucesso!\n\n", cidades[num_cidades].nome);
-    num_cidades++;
-
-    // Exibir as cidades cadastradas
-    printf("\nDados das cidades cadastradas:\n");
+    struct Cidade cidades[32] = {
+        // Acre
+        {"Acre", "Rio Branco", "A01", 364756, 9233.0, 10.955675, 64},
+        {"Acre", "Cruzeiro do Sul", "A02", 12457, 7924.943, 1.425684780, 10},
+        {"Acre", "Mancio Lima", "A03", 17910, 4672.321, 0.088211169, 7},
+        {"Acre", "Plácido de Castro", "A04", 19565, 2047.0, 0.601471, 5},
+        
+        // Bahia
+        {"Bahia", "Salvador", "B01", 2910705, 693.442, 114.4, 15},
+        {"Bahia", "Feira de Santana", "B02", 616272, 1304.0, 27.69108, 12},
+        {"Bahia", "Ilheus", "B03", 178649, 1456.0, 32.756, 15},
+        {"Bahia", "Porto Seguro", "B04", 168326, 2285.734, 24.70276, 14},
+        
+        // Ceará
+        {"Ceará", "Fortaleza", "C01", 2429000, 313.8, 83.459, 15},
+        {"Ceará", "Sobral", "C02", 242216, 2068.474, 21.67933, 10},
+        {"Ceará", "Acaraú", "C03", 68758, 842.884, 0.309490, 5},
+        {"Ceará", "Maracanaú", "C04", 234509, 105.071, 6.5, 5},
+        
+        // Distrito Federal
+        {"Distrito Federal", "Brasília", "D01", 2915869, 5801.0, 34.959, 15},
+        {"Distrito Federal", "Planaltina", "D02", 93872, 1194.0, 1.5, 5},
+        {"Distrito Federal", "Águas Lindas de Goiás", "D03", 225693, 191.817, 11.05296, 5},
+        {"Distrito Federal", "Sobradinho", "D04", 91142, 1142.0, 1.5, 5},
+        
+        // Espírito Santo
+        {"Espírito Santo", "Vitória", "E01", 396718, 1103.0, 14.5, 11},
+        {"Espírito Santo", "Serra", "E02", 520653, 547.6, 37.27, 8},
+        {"Espírito Santo", "Cariacica", "E03", 393946, 279.975, 13.698973, 5},
+        {"Espírito Santo", "Guarapari", "E04", 124656, 589.826, 19.74625, 7},
+        
+        // Goiás
+        {"Goiás", "Goiânia", "G01", 1444919, 729.296, 59.0, 20},
+        {"Goiás", "Anápolis", "G02", 434111, 933.156, 44.86034, 10},
+        {"Goiás", "Aparecida de Goiânia", "G03", 550925, 279.954, 28.21326, 10},
+        {"Goiás", "Trindade", "G04", 104111, 712.69, 20.20076, 15},
+        
+        // Maranhão
+        {"Maranhão", "São Luís", "M01", 1011415, 582.974, 12.0, 10},
+        {"Maranhão", "Imperatriz", "M02", 250000, 1000.0, 10.0, 5},
+        {"Maranhão", "Caxias", "M03", 463501, 1652.0, 1.814096, 9},
+        {"Maranhão", "São José de Ribamar", "M04", 244579, 386.282, 12.71988, 15},
+        
+        // Rio de Janeiro
+        {"Rio de Janeiro", "Rio de Janeiro", "R01", 6775561, 1221.040, 73.3, 20},
+        {"Rio de Janeiro", "Niterói", "R02", 487327, 138.0, 10.0, 10},
+        {"Rio de Janeiro", "Nova Iguaçu", "R03", 1363111, 138.0, 21.55906, 5},
+        {"Rio de Janeiro", "Duque de Caxias", "R04", 934914, 118.0, 12.0, 5}
+    };
+    
+    int num_cidades = 32; // Total de cidades
+    
+    // Exibir menu de cidades organizado por estado
+    printf("Lista de cidades disponíveis por estado:\n\n");
+    
+    char estado_atual[50] = "";
     for (int i = 0; i < num_cidades; i++) {
-        printf("\nNome: %s\n", cidades[i].nome);
-        printf("Estado: %s\n", cidades[i].estado);
-        printf("Código: %s\n", cidades[i].codigo);
-        printf("População: %d\n", cidades[i].populacao);
-        printf("Área: %.2f km²\n", cidades[i].area);
-        printf("PIB: %.2f bilhões\n", cidades[i].pib);
-        printf("Pontos Turísticos: %d\n", cidades[i].pontos_turisticos);
-        printf("\n");
-    }
-    void comparar_cidades(Cidade c1, Cidade c2) {
-        printf("Comparando %s e %s:\n", c1.nome_cidade, c2.nome_cidade);
-        
-        // Comparação de Densidade Populacional
-        float densidade1 = (float)c1.populacao / c1.area;
-        float densidade2 = (float)c2.populacao / c2.area;
-        if (densidade1 < densidade2) {
-            printf("Densidade Populacional: %s vence (%.2f < %.2f)\n", c1.nome_cidade, densidade1, densidade2);
-        } else {
-            printf("Densidade Populacional: %s vence (%.2f < %.2f)\n", c2.nome_cidade, densidade2, densidade1);
+        if (strcmp(estado_atual, cidades[i].estado) != 0) {
+            // Novo estado encontrado
+            strcpy(estado_atual, cidades[i].estado);
+            printf("\n%s:\n", estado_atual);
         }
-    
-        // Comparação de PIB
-        if (c1.pib > c2.pib) {
-            printf("PIB: %s vence (%.2f > %.2f)\n", c1.nome_cidade, c1.pib, c2.pib);
-        } else {
-            printf("PIB: %s vence (%.2f > %.2f)\n", c2.nome_cidade, c2.pib, c1.pib);
-        }
-    
-        // Comparação de Pontos Turísticos
-        if (c1.pontos_turisticos > c2.pontos_turisticos) {
-            printf("Pontos Turísticos: %s vence (%d > %d)\n", c1.nome_cidade, c1.pontos_turisticos, c2.pontos_turisticos);
-        } else {
-            printf("Pontos Turísticos: %s vence (%d > %d)\n", c2.nome_cidade, c2.pontos_turisticos, c1.pontos_turisticos);
-        }
+        printf("%d - %s\n", i, cidades[i].nome);
     }
     
-    int main() {
-        int cidade1, cidade2;
-        
-        printf("Escolha a primeira cidade (0 a 31): ");
-        scanf("%d", &cidade1);
-        printf("Escolha a segunda cidade (0 a 31): ");
-        scanf("%d", &cidade2);
-        
-        if (cidade1 < 0 || cidade1 >= ESTADOS * CIDADES || cidade2 < 0 || cidade2 >= ESTADOS * CIDADES) {
-            printf("Cidade inválida!\n");
-            return 1;
-        }
+    // Solicitar escolha do usuário
+    int cidade1, cidade2;
+    printf("\nEscolha o número da primeira cidade (0 a %d): ", num_cidades - 1);
+    scanf("%d", &cidade1);
+    printf("Escolha o número da segunda cidade (0 a %d): ", num_cidades - 1);
+    scanf("%d", &cidade2);
     
-        comparar_cidades(cidades[cidade1 / CIDADES][cidade1 % CIDADES], cidades[cidade2 / CIDADES][cidade2 % CIDADES]);
-    
-        return 0;
+    // Validar escolhas
+    if (cidade1 < 0 || cidade1 >= num_cidades || cidade2 < 0 || cidade2 >= num_cidades) {
+        printf("Escolha inválida!\n");
+        return 1;
     }
+    
+    // Comparar as cidades escolhidas
+    comparar_cidades(cidades[cidade1], cidades[cidade2]);
+    
+    return 0;
 }
